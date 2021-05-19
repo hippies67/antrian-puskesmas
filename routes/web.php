@@ -23,7 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('front', [FrontController::class, 'index']);
+Route::get('display', [FrontController::class, 'index']);
+Route::get('antrian', [FrontController::class, 'antrian']);
 
 
 Route::group(['middleware' => 'guest'], function() {
@@ -43,4 +44,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('video', [VideoController::class, 'video'])->name('video');
     Route::get('keterangan', [KeteranganController::class, 'keterangan'])->name('keterangan');
     Route::get('poliklinik', [PoliKlinikController::class, 'poliklinik'])->name('poliklinik');
+    Route::post('poliklinik', [PoliKlinikController::class, 'store']);
+    Route::post('poliklinik/{poliklinik}', [PoliKlinikController::class, 'update'])->name('poliklinik.update');
+    Route::post('poliklinik/status/{poliklinik}', [PoliKlinikController::class, 'updateStatus'])->name('poliklinik.updateStatus');
+    Route::post('checkPoli', [PoliKlinikController::class, 'checkPoli'])->name('poliklinik.checkPoli');
+    Route::delete('poliklinik/delete/{poliklinik}', [PoliKlinikController::class, 'delete'])->name('poliklinik.delete');
 });
