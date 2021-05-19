@@ -26,15 +26,14 @@
             <div class="card">
                 <div class="card-body">
                     <p class="card-title">Keterangan </p>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat rem exercitationem recusandae at illo unde earum iste quisquam fuga. Accusamus earum, maxime labore id libero porro voluptates fuga architecto?</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat rem
+                        exercitationem recusandae at illo unde earum iste quisquam fuga. Accusamus earum, maxime labore id
+                        libero porro voluptates fuga architecto?</p>
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#loket3').DataTable();
-            });
-
+    @endsection
+    @section('js')
+        <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
         </script>
     @endsection

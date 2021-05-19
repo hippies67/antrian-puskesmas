@@ -69,7 +69,8 @@
             };
 
         </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
+
         <script>
             $(document).ready(function() {
                 $('#video').DataTable();
