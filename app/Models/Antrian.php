@@ -11,6 +11,6 @@ class Antrian extends Model
 
     protected $table = "antrian";
     protected $fillable = [
-        'jenis_poliklinik, status'
+        'antrian', 'poli', 'status'
     ];
 }

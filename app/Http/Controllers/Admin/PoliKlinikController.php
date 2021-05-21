@@ -66,8 +66,8 @@ class PoliKlinikController extends Controller
         ];
 
         $poliklinik->update($data)
-            ? Alert::success('Berhasil', 'Poli Klinik telah berhasil di ubah')
-            : Alert::error('Gagal', 'Poli Klinik gagal di ubah');
+            ? Alert::success('Berhasil', 'Status Poli Klinik telah berhasil di ubah')
+            : Alert::error('Gagal', 'Status Poli Klinik gagal di ubah');
 
         return redirect()->back();
     }

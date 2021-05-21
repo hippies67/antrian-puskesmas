@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="{{ asset('assets/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.6/sweetalert2.min.css"
+    integrity="sha512-/D4S05MnQx/q7V0+15CCVZIeJcV+Z+ejL1ZgkAcXE1KZxTE4cYDvu+Fz+cQO9GopKrDzMNNgGK+dbuqza54jgw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -27,9 +31,10 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{ asset('assets/images/logo.svg') }}" class="mr-2"
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{ asset('assets/images/logo.svg') }}"
+            class="mr-2" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('assets/images/logo-mini.svg') }}"
             alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('assets/images/logo-mini.svg') }}" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -250,7 +255,8 @@
             </div>
             <ul class="chat-list">
               <li class="list active">
-                <div class="profile"><img src="{{ asset('assets/images/faces/face1.jpg') }}" alt="image"><span class="online"></span></div>
+                <div class="profile"><img src="{{ asset('assets/images/faces/face1.jpg') }}" alt="image"><span
+                    class="online"></span></div>
                 <div class="info">
                   <p>Thomas Douglas</p>
                   <p>Available</p>
@@ -258,7 +264,8 @@
                 <small class="text-muted my-auto">19 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="{{ asset('assets/images/faces/face2.jpg') }}" alt="image"><span class="offline"></span></div>
+                <div class="profile"><img src="{{ asset('assets/images/faces/face2.jpg') }}" alt="image"><span
+                    class="offline"></span></div>
                 <div class="info">
                   <div class="wrapper d-flex">
                     <p>Catherine</p>
@@ -269,7 +276,8 @@
                 <small class="text-muted my-auto">23 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="{{ asset('assets/images/faces/face3.jpg') }}" alt="image"><span class="online"></span></div>
+                <div class="profile"><img src="{{ asset('assets/images/faces/face3.jpg') }}" alt="image"><span
+                    class="online"></span></div>
                 <div class="info">
                   <p>Daniel Russell</p>
                   <p>Available</p>
@@ -277,7 +285,8 @@
                 <small class="text-muted my-auto">14 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="{{ asset('assets/images/faces/face4.jpg') }}" alt="image"><span class="offline"></span></div>
+                <div class="profile"><img src="{{ asset('assets/images/faces/face4.jpg') }}" alt="image"><span
+                    class="offline"></span></div>
                 <div class="info">
                   <p>James Richardson</p>
                   <p>Away</p>
@@ -285,7 +294,8 @@
                 <small class="text-muted my-auto">2 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="{{ asset('assets/images/faces/face5.jpg') }}" alt="image"><span class="online"></span></div>
+                <div class="profile"><img src="{{ asset('assets/images/faces/face5.jpg') }}" alt="image"><span
+                    class="online"></span></div>
                 <div class="info">
                   <p>Madeline Kennedy</p>
                   <p>Available</p>
@@ -293,7 +303,8 @@
                 <small class="text-muted my-auto">5 min</small>
               </li>
               <li class="list">
-                <div class="profile"><img src="{{ asset('assets/images/faces/face6.jpg') }}" alt="image"><span class="online"></span></div>
+                <div class="profile"><img src="{{ asset('assets/images/faces/face6.jpg') }}" alt="image"><span
+                    class="online"></span></div>
                 <div class="info">
                   <p>Sarah Graves</p>
                   <p>Available</p>
@@ -314,7 +325,7 @@
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
-          </li>            
+          </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
               aria-controls="form-elements">
@@ -361,30 +372,31 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-            @yield('content')
-          </div>
+          @yield('content')
         </div>
-
-        @include('sweetalert::alert')
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021. <a
-                href="https://www.bootstrapdash.com/" target="_blank">Aplikasi Antrian Puskesmas</a> from Ikbal Malik Ramadhan.
-              All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
-                class="ti-heart text-danger ml-1"></i></span>
-          </div>
-        </footer>
-        <!-- partial -->
       </div>
-      <!-- main-panel ends -->
+
+      @include('sweetalert::alert')
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021. <a
+              href="https://www.bootstrapdash.com/" target="_blank">Aplikasi Antrian Puskesmas</a> from Ikbal Malik
+            Ramadhan.
+            All rights reserved.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+              class="ti-heart text-danger ml-1"></i></span>
+        </div>
+      </footer>
+      <!-- partial -->
     </div>
-    <!-- page-body-wrapper ends -->
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-  
+
   <!-- plugins:js -->
   <!-- endinject -->
   <!-- Plugin js for this page -->
@@ -406,6 +418,9 @@
   <!-- Custom js for this page-->
   <script src="{{ asset('assets/js/dashboard.js') }}"></script>
   <script src="{{ asset('assets/js/Chart.roundedBarCharts.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.6/sweetalert2.min.js"
+    integrity="sha512-CrNI25BFwyQ47q3MiZbfATg0ZoG6zuNh2ANn/WjyqvN4ShWfwPeoCOi9pjmX4DoNioMQ5gPcphKKF+oVz3UjRw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- End custom js for this page-->
 </body>
 
